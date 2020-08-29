@@ -1,8 +1,8 @@
 public class Instructor extends Employee
 {
-
+// den nedarvede konstructor kan ændres ved at lave regnstykket i selve super constructoren som så sætter argumentet
     public Instructor(String name, String cpr, int hours, int salary) {
-        super(name, cpr, hours, salary);
+        super(name, cpr, hours, hours*456);
 
     }
 
@@ -12,7 +12,7 @@ public class Instructor extends Employee
 
     @Override
     public int getSalary() {
-        return getHours()*456;
+        return salary;
     }
 
 
