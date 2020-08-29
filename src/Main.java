@@ -5,8 +5,10 @@ public class Main
         Administration Bosslady = new Administration("hanse","04040404",12,12000,1);
         System.out.println(Bosslady);
 
-        Member noobie = new Member(true);
+        Member noobie = new Member("noobie", "0603" , true);
         System.out.println(noobie);
+        Member nonoOOb = new Member("nonoob","0404" ,false);
+        System.out.println(nonoOOb);
 
       Instructor ivan = new Instructor("ivanThegrusome","060606",20, 12000);
         System.out.println(ivan);

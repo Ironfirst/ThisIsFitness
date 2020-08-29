@@ -3,7 +3,8 @@ public class Member extends Person
 
     boolean isBasic;
 
-    public Member(boolean isBasic) {
+    public Member(String name, String cpr, boolean isBasic) {
+        super(name,cpr);
         this.isBasic = isBasic;
     }
 
