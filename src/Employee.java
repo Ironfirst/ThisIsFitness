@@ -19,7 +19,7 @@ public class Employee extends Person
 
     public int getSalary(){
 
-        return 23000;
+        return salary;
 
 
     }

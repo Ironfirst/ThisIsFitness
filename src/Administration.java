@@ -11,8 +11,11 @@ public class Administration extends Employee
         return this.vacation;
     }
 
+
+
     @Override
     public String toString() {
-        return super.toString() + ", vacation= " + vacation ;
+        return
+                super.toString();
     }
 }
