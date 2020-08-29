@@ -2,8 +2,14 @@ public class Main
 {
     public static void main(String[] args){
 
-        Administration Bosslady = new Administration();
-        System.out.println(Bosslady.toString());
+        Administration Bosslady = new Administration("hanse","04040404",12,12000,1);
+        System.out.println(Bosslady);
+
+        Member noobie = new Member(true);
+        System.out.println(noobie);
+
+      Instructor ivan = new Instructor("ivanThegrusome","060606",20, 12000);
+        System.out.println(ivan);
     }
 
 
