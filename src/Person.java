@@ -25,7 +25,7 @@ public class Person
 
     @Override
     public String toString() {
-        return   "name= " + name + " " +
-                ", cpr= " + cpr + " " ;
+        return    name + " " +
+                ", " + cpr + " " ;
     }
 }

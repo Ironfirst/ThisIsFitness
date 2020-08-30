@@ -16,6 +16,7 @@ public class Administration extends Employee
     @Override
     public String toString() {
         return
-                super.toString();
+                super.toString()
+                + ", "+ this.vacation;
     }
 }
