@@ -23,7 +23,7 @@ public class Main
         personer.add(ivan);
         personer.add(p1);
 
-        //loop igennem og udskriv
+        //loop igennem og udskriv med Print format
         System.out.printf("FITNESS EMPLOYEES  \n Name / Cpr / Hours / Salary / Vacation\n*************************************");
         for(Person ma: personer){
             if(ma instanceof Employee){
@@ -31,16 +31,17 @@ public class Main
             }
         }
 
-        System.out.println("\nFITNESS MEMBERS  \n Name / Cpr / Member type / Fee\n*************************************");
+        //System.out.println("\nFITNESS MEMBERS  \n Name / Cpr / Member type / Fee\n*************************************");
+
         for(Person ma: personer){
             if(ma instanceof Member){
                 System.out.println(ma);
             }
         }
 
-        System.out.println("\nEMPLOYEE & MEMBERS name and cpr \nName Cpr\n*************************************");
+        System.out.printf("%-10s%n%-16s%-16s%n%1s%n", "EMPLOYEE & MEMBERS name and cpr","Name","cpr","*************************************");
         for(Person ma: personer){
-            System.out.println(ma.getName()+" "+ma.getCpr());
+            System.out.printf("%-16s%-16s%n",ma.getName(),ma.getCpr());
         }
     }
 
