@@ -3,6 +3,12 @@ public class Member extends Person
 
     boolean isBasic;
 
+    public Member(String name, String cpr, boolean isBasic) {
+        super(name,cpr);
+        this.isBasic = isBasic;
+    }
+
+
     public String getMemberType(){
         if(isBasic){
             return "Basic member";
@@ -14,12 +20,19 @@ public class Member extends Person
     }
 
     public int monthlyFee(){
-        if(isBasic){
+        if(getMemberType()=="Basic member"){
             return 199;
         }
      else{
          return 299;
         }
-
     }
+
+    @Override
+    public String toString() {
+        return  super.toString() +
+                ", " + getMemberType() +
+                ", " + monthlyFee();
+    }
+
 }
