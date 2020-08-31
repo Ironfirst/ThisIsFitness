@@ -1,7 +1,7 @@
 public class Instructor extends Employee
 {
 // den nedarvede konstructor kan ændres ved at lave regnstykket i selve super constructoren som så sætter argumentet
-    public Instructor(String name, String cpr, int hours, int salary) {
+    public Instructor(String name, String cpr, int hours) {
         super(name, cpr, hours, hours*456);
 
     }

@@ -11,8 +11,8 @@ public class Main
         Member noobie = new Member("noobie", "0603" , true);
         Member nonoOOb = new Member("nonoob","0404" ,false);
 
-        Instructor ivan = new Instructor("ivanThegrusome","060606",20, 0);
-        Instructor p1 = new Instructor("pederpader","0000",144,0);
+        Instructor ivan = new Instructor("ivanThegrusome","060606",20);
+        Instructor p1 = new Instructor("pederpader","0000",144);
 
 
         // opretter Arraylist med personer samt tilføjer personer på listen
