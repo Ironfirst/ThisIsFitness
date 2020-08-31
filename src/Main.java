@@ -24,22 +24,28 @@ public class Main
         personer.add(p1);
 
         //loop igennem og udskriv med Print format
-        System.out.printf("FITNESS EMPLOYEES  \n Name / Cpr / Hours / Salary / Vacation\n*************************************");
+        String starSeperator ="***************************************************";
+        String format1 ="%n%-10s%n%-16s%-16s%-16s%-16s%-16s%n%1s%n";
+        String fitnessEmployeeFormat = "%-16s%-16s%-16s%-16s%-16s%n";
+        System.out.printf(format1,"FITNESS EMPLOYEES ","Name ", "Cpr" , "Hours" , "Salary" , "Vacation",starSeperator);
         for(Person ma: personer){
-            if(ma instanceof Employee){
-                System.out.println(ma);
+            if(ma instanceof Employee){                         // vacation kan ikke konverteres til administrator så jeg kan få info
+                                                                // meget doven løsning = next year ;/
+                System.out.printf(fitnessEmployeeFormat,ma.name,ma.cpr,((Employee) ma).hours,((Employee) ma).salary,"next year");
             }
         }
 
-        //System.out.println("\nFITNESS MEMBERS  \n Name / Cpr / Member type / Fee\n*************************************");
+        String format2 = "%n%-10s%n%-16s%-16s%-16s%-16s%n%1s%n";
+        System.out.printf(format2,"FITNESS MEMBERS","Name","Cpr","Member type","Fee",starSeperator);
 
+        String fitnessMemberFormat ="%-16s%-16s%-16s%-16s%n";
         for(Person ma: personer){
             if(ma instanceof Member){
-                System.out.println(ma);
+                System.out.printf(fitnessMemberFormat,ma.name,ma.cpr,((Member) ma).getMemberType(),((Member) ma).monthlyFee());
             }
         }
 
-        System.out.printf("%-10s%n%-16s%-16s%n%1s%n", "EMPLOYEE & MEMBERS name and cpr","Name","cpr","*************************************");
+        System.out.printf("%n%-10s%n%-16s%-16s%n%1s%n", "EMPLOYEE & MEMBERS name and cpr","Name","cpr",starSeperator);
         for(Person ma: personer){
             System.out.printf("%-16s%-16s%n",ma.getName(),ma.getCpr());
         }
